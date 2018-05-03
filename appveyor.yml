@@ -1,0 +1,24 @@
+﻿version: 1.0.{build}
+image: Visual Studio 2017
+before_build:
+- cmd: >-
+    npm install gulp -g
+
+    cd "ASP.NET Core with Angular\Web\TodoApp.Web"
+
+    npm install
+
+    gulp build
+
+    cd ..
+
+    cd ..
+
+    cd ..
+
+    dotnet --version
+
+    dotnet restore "ASP.NET Core with Angular/TodoApp.sln"
+build:
+  project: ASP.NET Core with Angular/TodoApp.sln
+  verbosity: minimal
