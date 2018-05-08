@@ -4,7 +4,7 @@ before_build:
 - cmd: >-
     npm install gulp -g
 
-    cd "ASP.NET Core with Angular\Web\TodoApp.Web"
+    cd "Web\TodoApp.Web"
 
     npm install
 
